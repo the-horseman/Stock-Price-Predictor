@@ -4,16 +4,11 @@ html {
   margin: 0%;
 }
 
-.bg-img {
+#bg-img {
   background-image: url("../images/Back.jpg");
   background-size: cover;
   height: 100%;
   background-attachment: fixed;
-}
-
-.cnt_bk {
-  background-color: black;
-  height: 25%;
 }
 
 #site_heading {
@@ -132,11 +127,98 @@ html {
 }
 
 #shw_dta:hover {
-  box-shadow: 0 12px 16px 0 #cfebff48,0 17px 50px 0 #cfebff48;
+  box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
 }
 
 #shw_dta:active {
   background-color: #001422;
-  box-shadow: 0 6px 10px 0 #cfebff48,0 10px 40px 0 #cfebff48;
+  box-shadow: 0 6px 10px 0 #cfebff48, 0 10px 40px 0 #cfebff48;
   transform: translateY(4px);
+}
+
+#cnt_bk {
+  position: absolute;
+  height: 25%;
+  width: 100%;
+  top: 97%;
+}
+
+#contact {
+  position: absolute;
+  color: white;
+  font-size: 250%;
+  font-weight: bold;
+  top: 97%;
+  left: 15%;
+}
+
+#mail {
+  position: absolute;
+  color: lightgray;
+  font-size: 110%;
+  top: 110%;
+  left: 15%;
+  text-decoration: none;
+}
+
+#lnk_to_pro {
+  position: absolute;
+  color: white;
+  font-size: 250%;
+  font-weight: bold;
+  top: 97%;
+  left: 40%;
+}
+
+#pro_lnk {
+  position: absolute;
+  color: lightgray;
+  font-size: 110%;
+  top: 110%;
+  left: 40%;
+  text-decoration: none;
+}
+
+#not {
+  position: absolute;
+  color: white;
+  font-size: 250%;
+  font-weight: bold;
+  top: 97%;
+  left: 70%;
+}
+
+#not_txt {
+  position: absolute;
+  color: lightgray;
+  font-size: 110%;
+  top: 107%;
+  left: 70%;
+  text-decoration: none;
+}
+
+#results {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 10%;
+}
+
+#op,
+#cl,
+#hi,
+#lo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #cfebff;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+#chrt {
+  display: none;
+  position: absolute;
+  top: 95%;
+  left: 39%;
+  width: 55%;
+  height: 60%;
 }

@@ -1,0 +1,11 @@
+body,
+html {
+  height: 100%;
+  margin: 0%;
+}
+
+.bg-img {
+  background-image: url("../images/Back.jpg");
+  background-size: cover;
+  height: 100%;
+}

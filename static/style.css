@@ -8,4 +8,135 @@ html {
   background-image: url("../images/Back.jpg");
   background-size: cover;
   height: 100%;
+  background-attachment: fixed;
+}
+
+.cnt_bk {
+  background-color: black;
+  height: 25%;
+}
+
+#site_heading {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  color: #cfebff;
+  font-size: 350%;
+}
+
+#quip {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  top: 13%;
+  left: 65%;
+  color: #8bbee0;
+  font-size: 100%;
+}
+
+#stck {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #cfebff;
+  font-size: 240%;
+  background-color: black;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+}
+
+#grph {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  color: #cfebff;
+  font-size: 240%;
+  background-color: black;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+}
+
+#tme {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  color: #cfebff;
+  font-size: 240%;
+  background-color: black;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+}
+
+#stck_frm1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  top: 38%;
+  left: 10%;
+  color: #cfebff;
+  font-size: 180%;
+  line-height: 130%;
+}
+
+#stck_frm2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  top: 38%;
+  left: 23%;
+  color: #cfebff;
+  font-size: 180%;
+  line-height: 130%;
+}
+
+#grph_frm {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  top: 38%;
+  left: 40%;
+  color: #cfebff;
+  font-size: 180%;
+  line-height: 130%;
+}
+
+#tme_frm {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  top: 38%;
+  left: 70%;
+  color: #cfebff;
+  font-size: 180%;
+  line-height: 130%;
+}
+
+#shw_dta {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  top: 75%;
+  left: 55%;
+  color: #cfebff;
+  font-size: 250%;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  background-color: black;
+  padding: 1% 2%;
+  border: none;
+  border-radius: 40px;
+}
+
+#shw_dta:hover {
+  box-shadow: 0 12px 16px 0 #cfebff48,0 17px 50px 0 #cfebff48;
+}
+
+#shw_dta:active {
+  background-color: #001422;
+  box-shadow: 0 6px 10px 0 #cfebff48,0 10px 40px 0 #cfebff48;
+  transform: translateY(4px);
 }

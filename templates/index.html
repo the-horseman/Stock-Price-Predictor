@@ -4,112 +4,134 @@
 <script src="../static/myapp.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
 <head>
     <title>Stock Price Predictor</title>
 </head>
 
+
 <body>
-    <img id="bg-img" src = "{{ url_for('static',filename='images/Back.jpg') }}"></img>
-    <h1 id="site_heading">Stock Price Predictor</h1>
-    <p id="quip">Why was the stock market trader electrocted?<br>He shorted Tesla.</p>
-    <p id="stck">Chose Stock</p>
-    <p id="grph">Chose Graph*</p>
-    <p id="tme">Chose Time*</p>
-    <p id="ext">*This is previous data</p>
-    <form id="frm">
-        <div id="stck_frm1">
-            <input type="radio" id="st1" name="stock_selection" value="Tatasteel">
-            <label for="st1">Tatasteel</label><br>
-            <input type="radio" id="st2" name="stock_selection" value="Stock 2">
-            <label for="st2">Stock 2</label><br>
-            <input type="radio" id="st3" name="stock_selection" value="Stock 3">
-            <label for="st3">Stock 3</label><br>
-            <input type="radio" id="st4" name="stock_selection" value="Stock 4">
-            <label for="st4">Stock 4</label><br>
-            <input type="radio" id="st5" name="stock_selection" value="Stock 5">
-            <label for="st5">Stock 5</label><br>
-            <input type="radio" id="st6" name="stock_selection" value="Stock 6">
-            <label for="st6">Stock 6</label><br>
-            <input type="radio" id="st7" name="stock_selection" value="Stock 7">
-            <label for="st7">Stock 7</label><br>
-            <input type="radio" id="st8" name="stock_selection" value="Stock 8">
-            <label for="st8">Stock 8</label><br>
-            <input type="radio" id="st9" name="stock_selection" value="Stock 9">
-            <label for="st9">Stock 9</label><br>
-            <input type="radio" id="st10" name="stock_selection" value="Stock 10">
-            <label for="st10">Stock 10</label><br>
-        </div>
-        <div id="stck_frm2">
-            <input type="radio" id="st11" name="stock_selection" value="Stock 11">
-            <label for="st11">Stock 11</label><br>
-            <input type="radio" id="st12" name="stock_selection" value="Stock 12">
-            <label for="st12">Stock 12</label><br>
-            <input type="radio" id="st13" name="stock_selection" value="Stock 13">
-            <label for="st13">Stock 13</label><br>
-            <input type="radio" id="st14" name="stock_selection" value="Stock 14">
-            <label for="st14">Stock 14</label><br>
-            <input type="radio" id="st15" name="stock_selection" value="Stock 15">
-            <label for="st15">Stock 15</label><br>
-            <input type="radio" id="st16" name="stock_selection" value="Stock 16">
-            <label for="st16">Stock 16</label><br>
-            <input type="radio" id="st17" name="stock_selection" value="Stock 17">
-            <label for="st17">Stock 17</label><br>
-            <input type="radio" id="st18" name="stock_selection" value="Stock 18">
-            <label for="st18">Stock 18</label><br>
-            <input type="radio" id="st19" name="stock_selection" value="Stock 19">
-            <label for="st19">Stock 19</label><br>
-            <input type="radio" id="st20" name="stock_selection" value="Stock 20">
-            <label for="st20">Stock 20</label><br>
-        </div>
-
-        <div id="grph_frm">
-            <input type="radio" id="open" name="graph_selection" value="open">
-            <label for="open">Open</label><br>
-            <input type="radio" id="close" name="graph_selection" value="close">
-            <label for="close">Close</label><br>
-            <input type="radio" id="high" name="graph_selection" value="high">
-            <label for="high">High</label><br>
-            <input type="radio" id="low" name="graph_selection" value="low">
-            <label for="low">Low</label><br>
-            <input type="radio" id="vol" name="graph_selection" value="vol">
-            <label for="vol">Volume</label><br>
-        </div>
-
-        <div id="tme_frm">
-            <input type="radio" id="5_day" name="time_selection" value="5_day">
-            <label for="5_day">5 days</label><br>
-            <input type="radio" id="1_mnth" name="time_selection" value="1_month">
-            <label for="1_mnth">1 Month</label><br>
-            <input type="radio" id="6_mnth" name="time_selection" value="6_month">
-            <label for="6_mnth">6 Month</label><br>
-            <input type="radio" id="1_yr" name="time_selection" value="1_year">
-            <label for="1_yr">1 Year</label><br>
-            <input type="radio" id="max" name="time_selection" value="max">
-            <label for="max">Max Data</label><br>
-        </div>
-        <input id="shw_dta" type="button" value="Show Data" onclick="reformat()">
-    </form>
-
-    <img id="cnt_bk" src="{{ url_for('static',filename='images/cnt_back.jpg') }}">
-    <p id="contact">Contact Me</p><br>
-    <a id="mail" href="mailto:aryanrishi20@gmail.com">aryanrishi20@gmail.com</a>
-    <p id="lnk_to_pro">Link to Project</p>
-    <a id="pro_lnk"
-        href="https://github.com/the-horseman/Stock-Price-Predictor">https://github.com/the-horseman/<br>Stock-Price-Predictor</a>
-    <p id="not">Notice</p>
-    <p id="not_txt">Site will be down from 12:00 AM to<br>5:00 AM IST once.</p>
-
-    <p id="pred">Predicted Values for<br>next Market Opening</p>
-    <div id="results">
-        <p id="op">Open</p>
-        <p id="cl">Close</p>
-        <p id="hi">High</p>
-        <p id="lo">Low</p>
+    <div id="Pro-Head">
+        <h1 id="Site-Heading">Stock Price Predictor</h1>
+        <p id="Quip">Why was the stock market trader electrocted? He shorted Tesla.
+        </p>
     </div>
-
-    <div id="chrt"></div>
-
+    <div id="Comp-frms-str">
+        <form id="frm">
+            <div id="Chs-Stcks">
+                <p class="Choice" id="stck">Chose Stock</p>
+                <div id="Stck-frms">
+                    <div id="stck_frm1">
+                        <input type="radio" id="st1" name="stock_selection" value="Tatasteel">
+                        <label for="st1">Tatasteel</label><br>
+                        <input type="radio" id="st2" name="stock_selection" value="Stock 2">
+                        <label for="st2">Stock 2</label><br>
+                        <input type="radio" id="st3" name="stock_selection" value="Stock 3">
+                        <label for="st3">Stock 3</label><br>
+                        <input type="radio" id="st4" name="stock_selection" value="Stock 4">
+                        <label for="st4">Stock 4</label><br>
+                        <input type="radio" id="st5" name="stock_selection" value="Stock 5">
+                        <label for="st5">Stock 5</label><br>
+                        <input type="radio" id="st6" name="stock_selection" value="Stock 6">
+                        <label for="st6">Stock 6</label><br>
+                        <input type="radio" id="st7" name="stock_selection" value="Stock 7">
+                        <label for="st7">Stock 7</label><br>
+                        <input type="radio" id="st8" name="stock_selection" value="Stock 8">
+                        <label for="st8">Stock 8</label><br>
+                        <input type="radio" id="st9" name="stock_selection" value="Stock 9">
+                        <label for="st9">Stock 9</label><br>
+                        <input type="radio" id="st10" name="stock_selection" value="Stock 10">
+                        <label for="st10">Stock 10</label><br>
+                    </div>
+                    <div id="stck_frm2">
+                        <input type="radio" id="st11" name="stock_selection" value="Stock 11">
+                        <label for="st11">Stock 11</label><br>
+                        <input type="radio" id="st12" name="stock_selection" value="Stock 12">
+                        <label for="st12">Stock 12</label><br>
+                        <input type="radio" id="st13" name="stock_selection" value="Stock 13">
+                        <label for="st13">Stock 13</label><br>
+                        <input type="radio" id="st14" name="stock_selection" value="Stock 14">
+                        <label for="st14">Stock 14</label><br>
+                        <input type="radio" id="st15" name="stock_selection" value="Stock 15">
+                        <label for="st15">Stock 15</label><br>
+                        <input type="radio" id="st16" name="stock_selection" value="Stock 16">
+                        <label for="st16">Stock 16</label><br>
+                        <input type="radio" id="st17" name="stock_selection" value="Stock 17">
+                        <label for="st17">Stock 17</label><br>
+                        <input type="radio" id="st18" name="stock_selection" value="Stock 18">
+                        <label for="st18">Stock 18</label><br>
+                        <input type="radio" id="st19" name="stock_selection" value="Stock 19">
+                        <label for="st19">Stock 19</label><br>
+                        <input type="radio" id="st20" name="stock_selection" value="Stock 20">
+                        <label for="st20">Stock 20</label><br>
+                    </div>
+                </div>
+            </div>
+            <div id="grph-time">
+                <div id="Chs-Grph">
+                    <p class="Choice" id="grph">Chose Graph*</p>
+                    <div id="grph_frm">
+                        <input type="radio" id="open" name="graph_selection" value="open">
+                        <label for="open">Open</label><br>
+                        <input type="radio" id="close" name="graph_selection" value="close">
+                        <label for="close">Close</label><br>
+                        <input type="radio" id="high" name="graph_selection" value="high">
+                        <label for="high">High</label><br>
+                        <input type="radio" id="low" name="graph_selection" value="low">
+                        <label for="low">Low</label><br>
+                        <input type="radio" id="vol" name="graph_selection" value="vol">
+                        <label for="vol">Volume</label><br>
+                    </div>
+                </div>
+                <div id="Chs-Tme">
+                    <p class="Choice" id="tme">Chose Time*</p>
+                    <div id="tme_frm">
+                        <input type="radio" id="5_day" name="time_selection" value="5_day">
+                        <label for="5_day">5 days</label><br>
+                        <input type="radio" id="1_mnth" name="time_selection" value="1_month">
+                        <label for="1_mnth">1 Month</label><br>
+                        <input type="radio" id="6_mnth" name="time_selection" value="6_month">
+                        <label for="6_mnth">6 Month</label><br>
+                        <input type="radio" id="1_yr" name="time_selection" value="1_year">
+                        <label for="1_yr">1 Year</label><br>
+                        <input type="radio" id="max" name="time_selection" value="max">
+                        <label for="max">Max Data</label><br>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <input id="shw_dta" type="button" value="Show Data" onclick="reformat()">
+    </div>
+    <div id="Shw-Data">
+        <div id="results">
+            <p id="pred">Predicted Values for<br>
+                next Market Opening</p>
+            <p id="op">Open = </p>
+            <p id="cl">Close = </p>
+            <p id="hi">High = </p>
+            <p id="lo">Low = </p>
+        </div>
+        <div id="chrt"></div>
+    </div>
+    <div id="Details">
+        <div id="Cnt">
+            <p class="Det-Head" id="contact">Contact Me</p>
+            <a class="Det-Dat" id="mail" href="mailto:aryanrishi20@gmail.com">aryanrishi20@gmail.com</a>
+        </div>
+        <div id="Git-pro">
+            <p class="Det-Head" id="Lnk-Txt">Link to Project</p>
+            <a class="Det-Dat" id="Git_Lnk"
+                href="https://github.com/the-horseman/Stock-Price-Predictor">https://github.com/the-horseman/<br>Stock-Price-Predictor</a>
+        </div>
+        <div id="Notice">
+            <p class="Det-Head" id="Not">Notice</p>
+            <p class="Det-Dat" id="Not_Txt">Site will be down from 12:00 AM to<br>5:00 AM IST once.</p>
+        </div>
+    </div>
 </body>
 
 </html>

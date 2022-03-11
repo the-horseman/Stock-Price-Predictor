@@ -17,7 +17,7 @@ def processing():
         stock = data["fro"][0]["value"]
         graph = data["fro"][1]["value"]
         time = data["fro"][2]["value"]
-
+        # print(stock, graph, time);
         dir = "Data\\"+stock+"\\"+stock+".csv"
         # predicted values
         pred_arr = pred(dir)

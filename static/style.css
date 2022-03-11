@@ -1,244 +1,268 @@
-body,
-html {
-  height: 100%;
-  margin: 0%;
+@media only screen and (min-width: 250px) {
+  body {
+    background-image: url("../static/images/Back.jpg");
+    background-size: 500%;
+    background-attachment: fixed;
+    font-family: "Montserrat";
+    margin: 0 0 0 0;
+  }
+
+  #Pro-Head {
+    color: #cfebff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 150%;
+  }
+  
+  #Site-Heading {
+    font-family: "Oswald";
+    font-size: 350%;
+  }
+  
+  #Quip {
+    font-size: 120%;
+    position: relative;
+  }
+  
+  #frm {
+    color: #cfebff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 80%;
+  }
+  
+  .Choice {
+    font-size: 240%;
+    font-weight: bolder;
+  }
+  
+  #Stck-frms {
+    display: flex;
+    font-size: 185%;
+    line-height: 150%;
+    justify-content: space-between;
+  }
+  
+  #Chs-Stcks {
+    flex: 0.3 1 auto;
+  }
+  
+  #grph_frm {
+    font-size: 150%;
+    line-height: 130%;
+  }
+  
+  #tme_frm {
+    font-size: 150%;
+    line-height: 130%;
+  }
+  
+  #Comp-frms-str {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 150%;
+  }
+  
+  #shw_dta {
+    margin-top: 2%;
+    color: #cfebff;
+    font-size: 250%;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    background-color: black;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 40px;
+    width: fit-content;
+  }
+  
+  #shw_dta:hover {
+    box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
+  }
+  
+  #shw_dta:active {
+    background-color: #001422;
+    box-shadow: 0 6px 10px 0 #cfebff48, 0 10px 40px 0 #cfebff48;
+    transform: translateY(4px);
+  }
+  
+  #Shw-Data {
+    margin-top: 3%;
+    display: none;
+    color: #cfebff;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 150%;
+    font-family: "Fredoka";
+  }
+  
+  #results {
+    font-size: 200%;
+    font-weight: bold;
+  }
+  
+  #chrt {
+    flex: 0.7 0 0;
+  }
+  
+  #Details {
+    margin-top: 3%;
+    display: flex;
+    color: white;
+    background-color: black;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 150%;
+  }
+  
+  .Det-Head {
+    font-size: 150%;
+  }
+  
+  .Det-Dat {
+    text-decoration: none;
+    color: white;
+    font-size: 70%;
+  }
 }
 
-#bg-img {
-  height: 100%;
-  width: 100%;
-  background-attachment: fixed;
-}
+@media only screen and (min-width: 950px) {
+  body {
+    background-image: url("../static/images/Back.jpg");
+    background-size: 200%;
+    background-attachment: fixed;
+    font-family: "Montserrat";
+    margin: 0 0 0 0;
+  }
+  
+  #Pro-Head {
+    color: #cfebff;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #Site-Heading {
+    font-family: "Oswald";
+    font-size: 350%;
+  }
+  
+  #Quip {
+    font-size: 120%;
+    position: relative;
+  }
+  
+  #frm {
+    color: #cfebff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80%;
+  }
+  
+  .Choice {
+    font-size: 240%;
+    font-weight: bolder;
+  }
+  
+  #Stck-frms {
+    display: flex;
+    font-size: 185%;
+    line-height: 150%;
+    justify-content: space-between;
+  }
+  
+  #Chs-Stcks {
+    flex: 0.3 1 auto;
+  }
+  
+  #grph_frm {
+    font-size: 150%;
+    line-height: 130%;
+  }
+  
+  #tme_frm {
+    font-size: 150%;
+    line-height: 130%;
+  }
+  
+  #Comp-frms-str {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  #shw_dta {
+    margin-top: 2%;
+    color: #cfebff;
+    font-size: 250%;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    background-color: black;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 40px;
+    width: fit-content;
+  }
+  
+  #shw_dta:hover {
+    box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
+  }
+  
+  #shw_dta:active {
+    background-color: #001422;
+    box-shadow: 0 6px 10px 0 #cfebff48, 0 10px 40px 0 #cfebff48;
+    transform: translateY(4px);
+  }
+  
+  #Shw-Data {
+    margin-top: 3%;
+    display: none;
+    color: #cfebff;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    font-family: "Fredoka";
+  }
 
-#site_heading {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: absolute;
-  top: 0%;
-  left: 25%;
-  color: #cfebff;
-  font-size: 350%;
-}
+  #results {
+    font-size: 200%;
+    font-weight: bold;
+  }
 
-#quip {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: absolute;
-  top: 13%;
-  left: 65%;
-  color: #8bbee0;
-  font-size: 100%;
-}
+  #chrt {
+    flex: 0.7 0 0;
+  }
 
-#stck {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  color: #cfebff;
-  font-size: 240%;
-  background-color: black;
-  padding-top: 1%;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-bottom: 1%;
-}
+  #Details {
+    margin-top: 3%;
+    margin-bottom: 0%;
+    display: flex;
+    color: white;
+    background-color: black;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+  }
 
-#grph {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  color: #cfebff;
-  font-size: 240%;
-  background-color: black;
-  padding-top: 1%;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-bottom: 1%;
-}
+  .Det-Head {
+    font-size: 250%;
+  }
 
-#tme {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: absolute;
-  top: 20%;
-  left: 70%;
-  color: #cfebff;
-  font-size: 240%;
-  background-color: black;
-  padding-top: 1%;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-bottom: 1%;
-}
-
-#ext {
-  position: absolute;
-  color: lightgray;
-  top: 90%;
-  left: 85%;
-}
-
-#stck_frm1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: absolute;
-  top: 38%;
-  left: 10%;
-  color: #cfebff;
-  font-size: 180%;
-  line-height: 130%;
-}
-
-#stck_frm2 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: absolute;
-  top: 38%;
-  left: 23%;
-  color: #cfebff;
-  font-size: 180%;
-  line-height: 130%;
-}
-
-#grph_frm {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: absolute;
-  top: 38%;
-  left: 40%;
-  color: #cfebff;
-  font-size: 180%;
-  line-height: 130%;
-}
-
-#tme_frm {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: absolute;
-  top: 38%;
-  left: 70%;
-  color: #cfebff;
-  font-size: 180%;
-  line-height: 130%;
-}
-
-#shw_dta {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  position: absolute;
-  top: 75%;
-  left: 55%;
-  color: #cfebff;
-  font-size: 250%;
-  cursor: pointer;
-  transition-duration: 0.2s;
-  background-color: black;
-  padding: 1% 2%;
-  border: none;
-  border-radius: 40px;
-}
-
-#shw_dta:hover {
-  box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
-}
-
-#shw_dta:active {
-  background-color: #001422;
-  box-shadow: 0 6px 10px 0 #cfebff48, 0 10px 40px 0 #cfebff48;
-  transform: translateY(4px);
-}
-
-#cnt_bk {
-  position: absolute;
-  height: 25%;
-  width: 100%;
-  top: 97%;
-}
-
-#contact {
-  position: absolute;
-  color: white;
-  font-size: 250%;
-  font-weight: bold;
-  top: 97%;
-  left: 15%;
-}
-
-#mail {
-  position: absolute;
-  color: lightgray;
-  font-size: 110%;
-  top: 110%;
-  left: 15%;
-  text-decoration: none;
-}
-
-#lnk_to_pro {
-  position: absolute;
-  color: white;
-  font-size: 250%;
-  font-weight: bold;
-  top: 97%;
-  left: 40%;
-}
-
-#pro_lnk {
-  position: absolute;
-  color: lightgray;
-  font-size: 110%;
-  top: 110%;
-  left: 40%;
-  text-decoration: none;
-}
-
-#not {
-  position: absolute;
-  color: white;
-  font-size: 250%;
-  font-weight: bold;
-  top: 97%;
-  left: 70%;
-}
-
-#not_txt {
-  position: absolute;
-  color: lightgray;
-  font-size: 110%;
-  top: 107%;
-  left: 70%;
-  text-decoration: none;
-}
-
-#results {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: 10%;
-}
-
-#pred {
-  display: none;
-  position: absolute;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  top: 92%;
-  left: 5%;
-  color: #cfebff;
-  font-size: 250%;
-  font-weight: bold;
-  background-color: black;
-  padding-left: 1%;
-  padding-right: 1%;
-}
-
-#op,
-#cl,
-#hi,
-#lo {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #cfebff;
-  font-size: xx-large;
-  font-weight: bold;
-}
-
-#chrt {
-  display: none;
-  position: absolute;
-  top: 95%;
-  left: 39%;
-  width: 55%;
-  height: 60%;
+  .Det-Dat {
+    text-decoration: none;
+    color: white;
+    font-size: 110%;
+  }
 }

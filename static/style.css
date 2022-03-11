@@ -5,9 +5,8 @@ html {
 }
 
 #bg-img {
-  background-image: url("../images/Back.jpg");
-  background-size: cover;
   height: 100%;
+  width: 100%;
   background-attachment: fixed;
 }
 
@@ -69,6 +68,13 @@ html {
   padding-left: 1%;
   padding-right: 1%;
   padding-bottom: 1%;
+}
+
+#ext {
+  position: absolute;
+  color: lightgray;
+  top: 90%;
+  left: 85%;
 }
 
 #stck_frm1 {
@@ -200,8 +206,22 @@ html {
 #results {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 10%;
+}
+
+#pred {
+  display: none;
+  position: absolute;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  top: 92%;
+  left: 5%;
+  color: #cfebff;
+  font-size: 250%;
+  font-weight: bold;
+  background-color: black;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 #op,

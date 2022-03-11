@@ -11,9 +11,12 @@ function reformat() {
     let bg_img = document.getElementById("bg-img");
     let results = document.getElementById("results");
     let chrt = document.getElementById("chrt");
+    let pred = document.getElementById("pred");
+    let ext = document.getElementById("ext");
     // Finished 
 
     // CSS changes 
+    ext.style.top = "85%";
     cnt_bk.style.top = "160%";
     contact.style.top = "160%";
     mail.style.top = "173%";
@@ -24,13 +27,23 @@ function reformat() {
     bg_img.style.height = "180%";
     results.style.display = "block";
     chrt.style.display = "block";
+    pred.style.display = "block";
     // Finished
 
-    // Animating Scroll
-    $('html, body').animate({
-        'scrollTop': $("#results").position().top
-    }, 1000);
-    // Finished
+    let dat = $("form").serializeArray();
+    console.log(dat);
+    dat = {"fro" : dat};
+    fetch("/data", {
+        method: "POST",
+        body: JSON.stringify(dat) 
+    }).then((result) => {
+        return result.json();
+    });
+    // .then((data) => {
+    //     current_speach = data["data"];
+    //     // spk("You spoke : " + current_speach);
+    //     instruct.innerText = "You spoke : " + current_speach;
+    // });
 
     // Making Chart
     google.charts.load('current', { 'packages': ['corechart'] });
@@ -46,8 +59,8 @@ function reformat() {
         );
 
         var options = {
-            title: 'Company Performance',
-            curveType: 'function',
+            title: 'Stock Previous Data Graph',
+            // curveType: 'function',
             legend: { position: 'bottom' }
         };
 
@@ -55,5 +68,11 @@ function reformat() {
 
         chart.draw(data, options);
     }
+    // Finished
+
+    // Animating Scroll
+    $('html, body').animate({
+        'scrollTop': $("#results").position().top
+    }, 1000);
     // Finished
 }

@@ -27,7 +27,7 @@
   }
   
   #frm {
-    color: #cfebff;
+    color: #a1d8ff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,6 +36,7 @@
   }
   
   .Choice {
+    color: #cfebff;
     font-size: 240%;
     font-weight: bolder;
     text-align: center;
@@ -163,7 +164,7 @@
   }
   
   #frm {
-    color: #cfebff;
+    color: #a1d8ff;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -171,6 +172,7 @@
   }
   
   .Choice {
+    color: #cfebff;
     font-size: 240%;
     font-weight: bolder;
     text-align: center;
@@ -245,6 +247,7 @@
 
   #chrt {
     flex: 0.7 0 0;
+    height:25em;
   }
 
   #Details {

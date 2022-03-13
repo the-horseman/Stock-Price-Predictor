@@ -41,4 +41,10 @@ function reformat() {
         chart.draw(data, options);
     }
     // Finished
+
+    // Scrolling Down
+    $('html, body').animate({
+        'scrollTop': $("#Shw-Data").position().top
+    }, 1000);
+    // Finished
 }

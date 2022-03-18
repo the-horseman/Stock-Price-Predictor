@@ -43,7 +43,7 @@ def graph_data():
         path = path + gra_st + "/" + gra_st + ".csv"
         gra_data = pd.read_csv( path, usecols=["Date", gra_tp], parse_dates=True, infer_datetime_format=True)
         ls = gra_data.tail(int(gra_tme)).to_numpy().tolist()
-        graph_dic = {"fin_dat": ls[::-1]}
+        graph_dic = {"fin_dat": ls}
     return jsonify(graph_dic)
 
 

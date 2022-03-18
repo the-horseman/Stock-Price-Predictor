@@ -62,7 +62,7 @@ function reformat() {
         var options = {
             title: 'Stock Previous Data Graph',
             // curveType: 'function',
-            pointSize: dat[2].value == "1_year" ? 2 : 4,
+            pointSize: dat[2].value == "792" ? 1 : 4,
             legend: { position: 'bottom' },
         };
         var chart = new google.visualization.LineChart(document.getElementById('chrt'));

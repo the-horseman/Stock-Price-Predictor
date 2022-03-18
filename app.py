@@ -19,13 +19,11 @@ def also_view():
     if request.method == "POST":
         data = request.get_json(force=True)
         stock = data["viewed"]
-        # print(stock)
         url = "https://yfapi.net/v6/finance/recommendationsbysymbol/"
         url = url + stock
         headers = {'x-api-key': "I8xBy8R9s17Hxd0hJWw31ExfqTV2f1i176OlKFH0"}
         response = requests.request("GET", url, headers=headers)
         ex = json.loads(response.text)["finance"]["result"][0]["recommendedSymbols"]
-        # print(ex)
         for i in ex:
             ex1 = i["symbol"]
             ex2 = round(i["score"]*100, 2)
@@ -44,17 +42,7 @@ def graph_data():
         path = "Data/"
         path = path + gra_st + "/" + gra_st + ".csv"
         gra_data = pd.read_csv( path, usecols=["Date", gra_tp], parse_dates=True, infer_datetime_format=True)
-        t = 5;
-        if gra_tme=="5_day" :
-            t = 5
-        elif gra_tme=="1_month":
-            t = 22
-        elif gra_tme=="6_month":
-            t = 6*22
-        elif gra_tme=="1_year":
-            t = 12*22
-        # print(gra_data.tail(t))
-        ls = gra_data.tail(t).to_numpy().tolist()
+        ls = gra_data.tail(int(gra_tme)).to_numpy().tolist()
         graph_dic = {"fin_dat": ls[::-1]}
     return jsonify(graph_dic)
 

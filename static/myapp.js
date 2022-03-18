@@ -1,5 +1,4 @@
 function reformat() {
-
     // Changing the display
     let resu = document.getElementById("Shw-Data");
     let recc = document.getElementById("ppl-wtch");
@@ -7,10 +6,12 @@ function reformat() {
     resu.style.display = "flex";
     // Changed the display
 
+
     // Getting data from site
     let dat = $("form").serializeArray();
     console.log(dat);
     // Got all data from site
+
 
     // People Also Watch Started
     let ext1 = { "viewed": String(dat[0].value) };
@@ -20,8 +21,6 @@ function reformat() {
     }).then((result) => {
         return result.json();
     }).then((final) => {
-        // console.log(final["ans"]);
-
         let ex = final["ans"];
         document.getElementById("sugst1").innerText = ex[0][0];
         document.getElementById("sugst2").innerText = ex[1][0];
@@ -38,8 +37,8 @@ function reformat() {
     });
     // People Also Watch finished
 
-    // Getting Predictions
 
+    // Getting Predictions
     // Got Predictions
 
 
@@ -53,45 +52,24 @@ function reformat() {
         return result.json();
     }).then((data) => {
         arr = data["fin_dat"];
-        // console.log(arr);
         let arr1 = ["Dates", String(dat[1].value)];
         arr.unshift(arr1);
         google.charts.load('current', { 'packages': ['corechart'] });
         google.charts.setOnLoadCallback(drawChart);
     });
-
-
-    // Got Graph Data
-    // dat = { "fro": dat };
-    // fetch("/data", {
-    //     method: "POST",
-    //     body: JSON.stringify(dat)
-    // }).then((result) => {
-    //     return result.json();
-    // });
-    // .then((data) => {
-    //     current_speach = data["data"];
-    //     // spk("You spoke : " + current_speach);
-    //     instruct.innerText = "You spoke : " + current_speach;
-    // });
-
-    // Making Chart
-
     function drawChart() {
         var data = google.visualization.arrayToDataTable(arr);
-        // console.log(arr);
         var options = {
             title: 'Stock Previous Data Graph',
             // curveType: 'function',
             pointSize: dat[2].value == "1_year" ? 2 : 4,
             legend: { position: 'bottom' },
         };
-
         var chart = new google.visualization.LineChart(document.getElementById('chrt'));
-
         chart.draw(data, options);
     }
-    // Finished
+    // Got Graph Data
+
 
     // Scrolling Down
     $('html, body').animate({

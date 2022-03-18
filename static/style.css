@@ -250,6 +250,56 @@
     height:25em;
   }
 
+  #ppl-wtch {
+    display: none;
+  }
+
+  #Wtch {
+    color: #cfebff;
+    text-align: center;
+    font-family: "Fredoka";
+    font-size: 300%;
+  }
+
+  #sugg {
+    /* margin-top: 5%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .stsug {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 15px 50px;
+    text-align: center;
+    background-color: #cfebff;
+    width: 15%;
+    height: 8em;
+    transition: transform .5s;
+    box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
+  }
+
+  .stsug:hover {
+    transform: scale(1.15);
+  }
+
+  .sugst {
+    font-family: "Fredoka";
+    line-height: 0%;
+    font-weight: bold;
+    font-size: 150%;
+    margin: 0% 0% 0% 0%;
+
+  }
+
+  .sugst_dat {
+    font-size: 120%;
+    margin: 0% 0% 0% 0%;
+    /* line-height: 0%; */
+  }
+
   #Details {
     margin-top: 3%;
     margin-bottom: 0%;
@@ -263,6 +313,7 @@
 
   .Det-Head {
     font-size: 250%;
+    line-height: 0%;
   }
 
   .Det-Dat {

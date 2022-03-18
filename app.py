@@ -1,15 +1,65 @@
 from flask import Flask, render_template, request, jsonify
-import tensorflow as tf
+# import tensorflow as tf
 import pandas as pd
 import numpy as np
+import requests
+import json
 
 app = Flask(__name__)
+
 
 @app.route("/")
 def start():
     return render_template("index.html")
 
-@app.route("/data", methods = ["POST"])
+
+@app.route("/view", methods=["POST"])
+def also_view():
+    view_dic = {"ans": []}
+    if request.method == "POST":
+        data = request.get_json(force=True)
+        stock = data["viewed"]
+        # print(stock)
+        url = "https://yfapi.net/v6/finance/recommendationsbysymbol/"
+        url = url + stock
+        headers = {'x-api-key': "I8xBy8R9s17Hxd0hJWw31ExfqTV2f1i176OlKFH0"}
+        response = requests.request("GET", url, headers=headers)
+        ex = json.loads(response.text)["finance"]["result"][0]["recommendedSymbols"]
+        # print(ex)
+        for i in ex:
+            ex1 = i["symbol"]
+            ex2 = round(i["score"]*100, 2)
+            view_dic["ans"].append([ex1, ex2])
+    return jsonify(view_dic)
+
+
+@app.route("/graph", methods=["POST"])
+def graph_data():
+    graph_dic = {}
+    if request.method == "POST":
+        data = request.get_json(force=True)
+        gra_st = data["sto"]
+        gra_tp = data["gra"]
+        gra_tme = data["tme"]
+        path = "Data/"
+        path = path + gra_st + "/" + gra_st + ".csv"
+        gra_data = pd.read_csv( path, usecols=["Date", gra_tp], parse_dates=True, infer_datetime_format=True)
+        t = 5;
+        if gra_tme=="5_day" :
+            t = 5
+        elif gra_tme=="1_month":
+            t = 22
+        elif gra_tme=="6_month":
+            t = 6*22
+        elif gra_tme=="1_year":
+            t = 12*22
+        # print(gra_data.tail(t))
+        ls = gra_data.tail(t).to_numpy().tolist()
+        graph_dic = {"fin_dat": ls[::-1]}
+    return jsonify(graph_dic)
+
+
+@app.route("/data", methods=["POST"])
 def processing():
     dat_dict = {}
     if request.method == "POST":
@@ -31,30 +81,23 @@ def processing():
         fin_arr = sel_data(tot_arr, time)
         # Select required data for graph
 
-
         dat_dict["Pred Data"] = pred_arr
         dat_dict["Graph Data"] = fin_arr
 
     return jsonify(dat_dict)
 
+
 def pred(dir):
     n_input = 1
     n_features = 4
-    data = pd.read_csv(dir, usecols=["Date", "Open", "Adj Close", "High", "Low"], index_col='Date',parse_dates=True).to_numpy()
-    
+    data = pd.read_csv(dir, usecols=["Date", "Open", "Adj Close",
+                       "High", "Low"], index_col='Date', parse_dates=True).to_numpy()
+
     first_eval_batch = data[-n_input:]
     current_batch = first_eval_batch.reshape((1, n_input, n_features))
     current_pred = model.predict(current_batch)[0][0]
     return current_pred
 
-
-
-def tot_data(stck, grgh):
-    data = pd.read_csv(dir, usecols=["Date", "Open", "Adj Close", "High", "Low"], index_col='Date',parse_dates=True)
-    return stck
-
-def sel_data(tot_arr, tme):
-    return tot_arr
 
 if __name__ == "__main__":
     app.run()

@@ -40,7 +40,7 @@ def graph_data():
         gra_tp = data["gra"]
         gra_tme = data["tme"]
         path = "Data/"
-        path = path + gra_st[:-2:] + "/" + gra_st + ".csv"
+        path = path + gra_st[:-3:] + "/" + gra_st + ".csv"
         gra_data = pd.read_csv( path, usecols=["Date", gra_tp], parse_dates=True, infer_datetime_format=True)
         ls = gra_data.tail(int(gra_tme)).to_numpy().tolist()
         graph_dic = {"fin_dat": ls}

@@ -41,4 +41,4 @@ def esemytrp_data_add():
 
 def esemytrp_run():
     EaseMyTrip_Data()
-    esemytrp_run()
+    esemytrp_data_add()

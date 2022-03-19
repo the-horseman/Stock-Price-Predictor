@@ -42,4 +42,4 @@ def bhrtArtl_data_add():
 
 def bhrtArtl_run():
     BhrtiAirtl_Data()
-    bhrtArtl_run()
+    bhrtArtl_data_add()

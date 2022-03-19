@@ -27,8 +27,8 @@ def PRAJ_data():
     driver.quit()
 
 def PrajInd_data_add():
-    path1 = "PRAJIND.NS.csv"
-    path2 = "PRAJIND.NS (1).csv"
+    path1 = os.path.dirname(os.path.realpath(__file__)) + "/PRAJIND.NS.csv"
+    path2 = os.path.dirname(os.path.realpath(__file__)) + "/PRAJIND.NS (1).csv"
     dataframe1 = pd.read_csv(path1)
     findat1 = dataframe1.tail(1).to_numpy().tolist()
     dataframe2 = pd.read_csv(path2)

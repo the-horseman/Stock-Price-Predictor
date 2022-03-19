@@ -1,3 +1,4 @@
+from matplotlib.pyplot import axis
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -27,8 +28,8 @@ def AxisBnk_Data():
     driver.quit()   
 
 def AxisBnk_data_add():
-    path1 = "AXISBANK.NS.csv"
-    path2 = "AXISBANK.NS (1).csv"
+    path1 = os.path.dirname(os.path.realpath(__file__)) + "/AXISBANK.NS.csv"
+    path2 = os.path.dirname(os.path.realpath(__file__)) + "/AXISBANK.NS (1).csv"
     dataframe1 = pd.read_csv(path1)
     findat1 = dataframe1.tail(1).to_numpy().tolist()
     dataframe2 = pd.read_csv(path2)
@@ -43,3 +44,4 @@ def AxisBnk_data_add():
 def axis_run():
     AxisBnk_Data()
     AxisBnk_data_add()
+# axis_run()

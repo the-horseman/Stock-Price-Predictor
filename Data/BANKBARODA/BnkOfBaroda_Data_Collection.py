@@ -27,8 +27,8 @@ def BnkOfBaroda_Data():
     driver.quit()
 
 def BnkBaroda_data_add():
-    path1 = "BANKBARODA.NS.csv"
-    path2 = "BANKBARODA.NS (1).csv"
+    path1 = os.path.dirname(os.path.realpath(__file__)) + "/BANKBARODA.NS.csv"
+    path2 = os.path.dirname(os.path.realpath(__file__)) + "/BANKBARODA.NS (1).csv"
     dataframe1 = pd.read_csv(path1)
     findat1 = dataframe1.tail(1).to_numpy().tolist()
     dataframe2 = pd.read_csv(path2)

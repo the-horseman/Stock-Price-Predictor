@@ -27,8 +27,8 @@ def GHCL_Data():
     driver.quit()
 
 def GHCL_data_add():
-    path1 = "GHCL.NS.csv"
-    path2 = "GHCL.NS (1).csv"
+    path1 = os.path.dirname(os.path.realpath(__file__)) + "/GHCL.NS.csv"
+    path2 = os.path.dirname(os.path.realpath(__file__)) + "/GHCL.NS (1).csv"
     dataframe1 = pd.read_csv(path1)
     findat1 = dataframe1.tail(1).to_numpy().tolist()
     dataframe2 = pd.read_csv(path2)

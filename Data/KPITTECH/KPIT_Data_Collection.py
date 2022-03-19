@@ -27,8 +27,8 @@ def KPIT_Data():
     driver.quit()
     
 def Kpit_data_add():
-    path1 = "KPITTECH.NS.csv"
-    path2 = "KPITTECH.NS (1).csv"
+    path1 = os.path.dirname(os.path.realpath(__file__)) + "/KPITTECH.NS.csv"
+    path2 = os.path.dirname(os.path.realpath(__file__)) + "/KPITTECH.NS (1).csv"
     dataframe1 = pd.read_csv(path1)
     findat1 = dataframe1.tail(1).to_numpy().tolist()
     dataframe2 = pd.read_csv(path2)

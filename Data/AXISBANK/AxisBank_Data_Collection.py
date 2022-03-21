@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 import time
 import os
 import pandas as pd
-from datetime import datetime, timedelta
 
 def AxisBnk_Data():
     options = webdriver.ChromeOptions() ;
@@ -13,14 +12,15 @@ def AxisBnk_Data():
     driver = webdriver.Chrome(chrome_options=options)
 
     # driver = webdriver.Chrome()
-    tom = datetime.now() + timedelta(1)
-    tom = tom.strftime('%Y-%m-%d')
 
     driver.get("https://finance.yahoo.com/quote/AXISBANK.NS/history?p=AXISBANK.NS")
     print(driver.title)
 
     driver.find_element(By.XPATH, '//*[@id="Col1-1-HistoricalDataTable-Proxy"]/section/div[1]/div[1]/div[1]/div/div/div').click()
-# //*[@id="Col1-1-HistoricalDataTable-Proxy"]/section/div[1]/div[1]/div[1]/div/div/div
+
+    from datetime import datetime, timedelta
+    tom = datetime.now() + timedelta(1)
+    tom = tom.strftime('%Y-%m-%d')
     driver.find_element(By.XPATH, '//*[@id="dropdown-menu"]/div/div[2]/input').send_keys(tom)
 
     driver.find_element(By.XPATH, '//*[@id="dropdown-menu"]/div/ul[1]/li[1]/button').click()

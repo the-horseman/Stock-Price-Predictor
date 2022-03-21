@@ -15,7 +15,12 @@ def CanraBnk_Data():
     driver.get("https://finance.yahoo.com/quote/CANBK.NS/history?p=CANBK.NS")
     print(driver.title)
 
-    driver.find_element(By.XPATH, '//*[@id="Col1-1-HistoricalDataTable-Proxy"]/section/div[1]/div[1]/div[1]/div/div').click()
+    driver.find_element(By.XPATH, '//*[@id="Col1-1-HistoricalDataTable-Proxy"]/section/div[1]/div[1]/div[1]/div/div/div').click()
+
+    from datetime import datetime, timedelta
+    tom = datetime.now() + timedelta(1)
+    tom = tom.strftime('%Y-%m-%d')
+    driver.find_element(By.XPATH, '//*[@id="dropdown-menu"]/div/div[2]/input').send_keys(tom)
 
     driver.find_element(By.XPATH, '//*[@id="dropdown-menu"]/div/ul[1]/li[1]/button').click()
 

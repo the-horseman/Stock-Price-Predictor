@@ -15,17 +15,17 @@
     flex-direction: column;
     width: 150%;
   }
-  
+
   #Site-Heading {
     font-family: "Oswald";
     font-size: 350%;
   }
-  
+
   #Quip {
     font-size: 120%;
     position: relative;
   }
-  
+
   #frm {
     color: #a1d8ff;
     display: flex;
@@ -34,35 +34,35 @@
     flex-direction: column;
     width: 80%;
   }
-  
+
   .Choice {
     color: #cfebff;
     font-size: 240%;
     font-weight: bolder;
     text-align: center;
   }
-  
+
   #Stck-frms {
     display: flex;
     font-size: 185%;
     line-height: 150%;
     justify-content: space-between;
   }
-  
+
   #Chs-Stcks {
     flex: 0.3 1 auto;
   }
-  
+
   #grph_frm {
     font-size: 150%;
     line-height: 130%;
   }
-  
+
   #tme_frm {
     font-size: 150%;
     line-height: 130%;
   }
-  
+
   #Comp-frms-str {
     display: flex;
     flex-direction: column;
@@ -70,7 +70,7 @@
     justify-content: space-around;
     width: 150%;
   }
-  
+
   #shw_dta {
     margin-top: 2%;
     color: #cfebff;
@@ -83,17 +83,17 @@
     border-radius: 40px;
     width: fit-content;
   }
-  
+
   #shw_dta:hover {
     box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
   }
-  
+
   #shw_dta:active {
     background-color: #001422;
     box-shadow: 0 6px 10px 0 #cfebff48, 0 10px 40px 0 #cfebff48;
     transform: translateY(4px);
   }
-  
+
   #Shw-Data {
     margin-top: 3%;
     display: none;
@@ -104,16 +104,65 @@
     width: 150%;
     font-family: "Fredoka";
   }
-  
+
   #results {
     font-size: 200%;
     font-weight: bold;
   }
-  
+
   #chrt {
     flex: 0.7 0 0;
   }
   
+  #ppl-wtch {
+    display: none;
+  }
+
+  #Wtch {
+    color: #cfebff;
+    text-align: center;
+    font-family: "Fredoka";
+    font-size: 300%;
+  }
+
+  #sugg {
+    /* margin-top: 5%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .stsug {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 15px 50px;
+    text-align: center;
+    background-color: #cfebff;
+    width: 15%;
+    height: 8em;
+    transition: transform 0.5s;
+    box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
+  }
+
+  .stsug:hover {
+    transform: scale(1.15);
+  }
+
+  .sugst {
+    font-family: "Fredoka";
+    line-height: 0%;
+    font-weight: bold;
+    font-size: 150%;
+    margin: 0% 0% 0% 0%;
+  }
+
+  .sugst_dat {
+    font-size: 120%;
+    margin: 0% 0% 0% 0%;
+    /* line-height: 0%; */
+  }
+
   #Details {
     margin-top: 3%;
     display: flex;
@@ -124,11 +173,11 @@
     align-items: center;
     width: 150%;
   }
-  
+
   .Det-Head {
     font-size: 150%;
   }
-  
+
   .Det-Dat {
     text-decoration: none;
     color: white;
@@ -144,7 +193,7 @@
     font-family: "Montserrat";
     margin: 0 0 0 0;
   }
-  
+
   #Pro-Head {
     color: #cfebff;
     display: flex;
@@ -152,17 +201,17 @@
     align-items: center;
     flex-direction: column;
   }
-  
+
   #Site-Heading {
     font-family: "Oswald";
     font-size: 350%;
   }
-  
+
   #Quip {
     font-size: 120%;
     position: relative;
   }
-  
+
   #frm {
     color: #a1d8ff;
     display: flex;
@@ -170,35 +219,35 @@
     flex-direction: row;
     width: 80%;
   }
-  
+
   .Choice {
     color: #cfebff;
     font-size: 240%;
     font-weight: bolder;
     text-align: center;
   }
-  
+
   #Stck-frms {
     display: flex;
     font-size: 185%;
     line-height: 150%;
     justify-content: space-between;
   }
-  
+
   #Chs-Stcks {
     flex: 0.3 1 auto;
   }
-  
+
   #grph_frm {
     font-size: 150%;
     line-height: 130%;
   }
-  
+
   #tme_frm {
     font-size: 150%;
     line-height: 130%;
   }
-  
+
   #Comp-frms-str {
     display: flex;
     flex-direction: column;
@@ -206,7 +255,7 @@
     justify-content: space-between;
     width: 100%;
   }
-  
+
   #shw_dta {
     margin-top: 2%;
     color: #cfebff;
@@ -219,17 +268,17 @@
     border-radius: 40px;
     width: fit-content;
   }
-  
+
   #shw_dta:hover {
     box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
   }
-  
+
   #shw_dta:active {
     background-color: #001422;
     box-shadow: 0 6px 10px 0 #cfebff48, 0 10px 40px 0 #cfebff48;
     transform: translateY(4px);
   }
-  
+
   #Shw-Data {
     margin-top: 3%;
     display: none;
@@ -247,7 +296,7 @@
 
   #chrt {
     flex: 0.7 0 0;
-    height:25em;
+    height: 25em;
   }
 
   #ppl-wtch {
@@ -277,7 +326,7 @@
     background-color: #cfebff;
     width: 15%;
     height: 8em;
-    transition: transform .5s;
+    transition: transform 0.5s;
     box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
   }
 
@@ -291,7 +340,6 @@
     font-weight: bold;
     font-size: 150%;
     margin: 0% 0% 0% 0%;
-
   }
 
   .sugst_dat {

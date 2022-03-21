@@ -21,7 +21,7 @@ def also_view():
         stock = data["viewed"]
         url = "https://yfapi.net/v6/finance/recommendationsbysymbol/"
         url = url + stock
-        headers = {'x-api-key': "I8xBy8R9s17Hxd0hJWw31ExfqTV2f1i176OlKFH0"}
+        headers = {'x-api-key': "fKQUxQHM0o5rek4MhOLTM85GXHsqJHBv4UKFbLim"}
         response = requests.request("GET", url, headers=headers)
         ex = json.loads(response.text)["finance"]["result"][0]["recommendedSymbols"]
         for i in ex:

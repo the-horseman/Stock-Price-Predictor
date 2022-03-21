@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 import time
 import os
 import pandas as pd
+from datetime import datetime, timedelta
 
 def AxisBnk_Data():
     options = webdriver.ChromeOptions() ;
@@ -12,11 +13,15 @@ def AxisBnk_Data():
     driver = webdriver.Chrome(chrome_options=options)
 
     # driver = webdriver.Chrome()
+    tom = datetime.now() + timedelta(1)
+    tom = tom.strftime('%Y-%m-%d')
 
     driver.get("https://finance.yahoo.com/quote/AXISBANK.NS/history?p=AXISBANK.NS")
     print(driver.title)
 
-    driver.find_element(By.XPATH, '//*[@id="Col1-1-HistoricalDataTable-Proxy"]/section/div[1]/div[1]/div[1]/div/div').click()
+    driver.find_element(By.XPATH, '//*[@id="Col1-1-HistoricalDataTable-Proxy"]/section/div[1]/div[1]/div[1]/div/div/div').click()
+# //*[@id="Col1-1-HistoricalDataTable-Proxy"]/section/div[1]/div[1]/div[1]/div/div/div
+    driver.find_element(By.XPATH, '//*[@id="dropdown-menu"]/div/div[2]/input').send_keys(tom)
 
     driver.find_element(By.XPATH, '//*[@id="dropdown-menu"]/div/ul[1]/li[1]/button').click()
 
@@ -24,7 +29,7 @@ def AxisBnk_Data():
 
     driver.find_element(By.XPATH, '//*[@id="Col1-1-HistoricalDataTable-Proxy"]/section/div[1]/div[2]/span[2]/a').click()
 
-    time.sleep(30)
+    time.sleep(10)
     driver.quit()   
 
 def AxisBnk_data_add():
@@ -37,11 +42,11 @@ def AxisBnk_data_add():
     print(findat1 == findat2)
     if (findat1 != findat2):
         with open(path1, 'a', newline='') as f_object:
-            f_object.write(",".join(list(map(str,findat2[0])))+"\n")
+            f_object.writelines(",".join(list(map(str,findat2[0])))+"\n")
 
     os.remove(path2)
 
 def axis_run():
     AxisBnk_Data()
     AxisBnk_data_add()
-# axis_run()
+axis_run()

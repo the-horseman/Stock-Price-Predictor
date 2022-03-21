@@ -20,7 +20,8 @@ def AxisBnk_Data():
 
     from datetime import datetime, timedelta
     tom = datetime.now() + timedelta(1)
-    tom = tom.strftime('%Y-%m-%d')
+    tom = tom.strftime('%d-%m-%Y')
+    tom = "".join(tom.split('-'))
     driver.find_element(By.XPATH, '//*[@id="dropdown-menu"]/div/div[2]/input').send_keys(tom)
 
     driver.find_element(By.XPATH, '//*[@id="dropdown-menu"]/div/ul[1]/li[1]/button').click()
@@ -29,7 +30,7 @@ def AxisBnk_Data():
 
     driver.find_element(By.XPATH, '//*[@id="Col1-1-HistoricalDataTable-Proxy"]/section/div[1]/div[2]/span[2]/a').click()
 
-    time.sleep(10)
+    time.sleep(15)
     driver.quit()   
 
 def AxisBnk_data_add():

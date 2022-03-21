@@ -19,7 +19,8 @@ def Balkrishna_Data():
 
     from datetime import datetime, timedelta
     tom = datetime.now() + timedelta(1)
-    tom = tom.strftime('%Y-%m-%d')
+    tom = tom.strftime('%d-%m-%Y')
+    tom = "".join(tom.split('-'))
     driver.find_element(By.XPATH, '//*[@id="dropdown-menu"]/div/div[2]/input').send_keys(tom)
 
     driver.find_element(By.XPATH, '//*[@id="dropdown-menu"]/div/ul[1]/li[1]/button').click()

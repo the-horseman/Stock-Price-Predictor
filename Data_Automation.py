@@ -19,26 +19,86 @@ import Data.TVSMOTOR.TVS_Data_Collection as TvsMtr
 import Data.UPL.UPL_Data_Collection as Upl
 import Data.WIPRO.Wipro_Data_Collection as Wpro
 
-AxsBnk.axis_run()
-BalKrish.balkrish_run()
-BnkBrda.broda_run()
-Bel.bel_run()
-BhrtArtl.bhrtArtl_run()
-CanBnk.cnra_run()
-EseMyTrp.esemytrp_run()
-Ghcl.ghcl_run()
-Hdfc.hdfc_run()
-Icici.icici_run()
-JblFood.jblfood_run()
-Kpit.kpit_run()
-Lnt.lnt_run()
-Praj.praj_run()
-Rel.Rel_run()
-TatMotr.tatmotr_run()
-TatStl.tatstl_run()
-TvsMtr.tvsmotr_run()
-Upl.upl_run()
-Wpro.wpro_run()
+try:
+    AxsBnk.axis_run()
+except:
+    AxsBnk.axis_run()
+try:
+    BalKrish.balkrish_run()
+except:
+    BalKrish.balkrish_run()
+try:
+    BnkBrda.broda_run()
+except:
+    BnkBrda.broda_run()
+try:
+    Bel.bel_run()
+except:
+    Bel.bel_run()
+try:
+    BhrtArtl.bhrtArtl_run()
+except:
+    BhrtArtl.bhrtArtl_run()
+try:
+    CanBnk.cnra_run()
+except:
+    CanBnk.cnra_run()
+try:
+    EseMyTrp.esemytrp_run()
+except:
+    EseMyTrp.esemytrp_run()
+try:
+    Ghcl.ghcl_run()
+except:
+    Ghcl.ghcl_run()
+try:
+    Hdfc.hdfc_run()
+except:
+    Hdfc.hdfc_run()
+try:
+    Icici.icici_run()
+except:
+    Icici.icici_run()
+try:
+    JblFood.jblfood_run()
+except:
+    JblFood.jblfood_run()
+try:
+    Kpit.kpit_run()
+except:
+    Kpit.kpit_run()
+try:
+    Lnt.lnt_run()
+except:
+    Lnt.lnt_run()
+try:
+    Praj.praj_run()
+except:
+    Praj.praj_run()
+try:
+    Rel.Rel_run()
+except:
+    Rel.Rel_run()
+try:
+    TatMotr.tatmotr_run()
+except:
+    TatMotr.tatmotr_run()
+try:
+    TatStl.tatstl_run()
+except:
+    TatStl.tatstl_run()
+try:
+    TvsMtr.tvsmotr_run()
+except:
+    TvsMtr.tvsmotr_run()
+try:
+    Upl.upl_run()
+except:
+    Upl.upl_run()
+try:
+    Wpro.wpro_run()
+except:
+    Wpro.wpro_run()
 
 from git import Repo
 from datetime import datetime

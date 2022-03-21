@@ -43,7 +43,6 @@ def Tatstl_data_add():
         with open(path1, 'a', newline='') as f_object:
             f_object.write(",".join(list(map(str,findat2[0])))+"\n")
 
-    print(pd.read_csv(path1))
     os.remove(path2)
 
 def tatstl_run():

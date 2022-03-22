@@ -1,6 +1,6 @@
 @media only screen and (min-width: 250px) {
   body {
-    background-image: url("../static/images/Back.jpg");
+    background-image: url("../static/images/Back(1).jpg");
     background-size: 500%;
     background-attachment: fixed;
     font-family: "Montserrat";
@@ -44,9 +44,18 @@
 
   #Stck-frms {
     display: flex;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2% 2% 2% 2%;
     font-size: 185%;
     line-height: 150%;
     justify-content: space-between;
+    transition-duration: 0.2s;
+  }
+  #Stck-frms:hover {
+    background:rgba(255, 255, 255, 0.2);
   }
 
   #Chs-Stcks {
@@ -56,11 +65,31 @@
   #grph_frm {
     font-size: 150%;
     line-height: 130%;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2% 2% 2% 2%;
+    justify-content: space-between;
+    transition-duration: 0.2s;
+  }
+  #grph_frm:hover {
+    background:rgba(255, 255, 255, 0.2);
   }
 
   #tme_frm {
     font-size: 150%;
     line-height: 130%;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2% 2% 2% 2%;
+    justify-content: space-between;
+    transition-duration: 0.2s;
+  }
+  #tme_frm:hover {
+    background:rgba(255, 255, 255, 0.2);
   }
 
   #Comp-frms-str {
@@ -72,26 +101,35 @@
   }
 
   #shw_dta {
-    margin-top: 2%;
-    color: #cfebff;
-    font-size: 250%;
-    cursor: pointer;
-    transition-duration: 0.2s;
-    background-color: black;
-    padding: 1% 2%;
+    display: flex;
+    margin-top: 0.5em;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background:rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    font-size: 280%;
+    font-weight: bolder;
     border: none;
-    border-radius: 40px;
-    width: fit-content;
+    color: #cfebff;
+    transition-duration: 0.2s;
   }
 
   #shw_dta:hover {
-    box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
+    background:rgba(255, 255, 255, 0.2);
   }
-
+  
   #shw_dta:active {
-    background-color: #001422;
-    box-shadow: 0 6px 10px 0 #cfebff48, 0 10px 40px 0 #cfebff48;
     transform: translateY(4px);
+    background:rgba(255, 255, 255, 0.23);
+    color: #cfebff;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.8);
   }
 
   #Shw-Data {
@@ -125,11 +163,19 @@
     font-size: 300%;
   }
 
+  #ppl-wtch {
+    width: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
   #sugg {
     /* margin-top: 5%; */
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .stsug {
@@ -139,7 +185,7 @@
     border-radius: 15px 50px;
     text-align: center;
     background-color: #cfebff;
-    width: 15%;
+    width: 20%;
     height: 8em;
     transition: transform 0.5s;
     box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
@@ -187,8 +233,8 @@
 
 @media only screen and (min-width: 950px) {
   body {
-    background-image: url("../static/images/Back.jpg");
-    background-size: 200%;
+    background-image: url("../static/images/Back(1).jpg");
+    background-size: 100%;
     background-attachment: fixed;
     font-family: "Montserrat";
     margin: 0 0 0 0;
@@ -229,9 +275,18 @@
 
   #Stck-frms {
     display: flex;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2% 2% 2% 2%;
     font-size: 185%;
     line-height: 150%;
     justify-content: space-between;
+    transition-duration: 0.2s;
+  }
+  #Stck-frms:hover {
+    background:rgba(255, 255, 255, 0.2);
   }
 
   #Chs-Stcks {
@@ -241,11 +296,31 @@
   #grph_frm {
     font-size: 150%;
     line-height: 130%;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2% 2% 2% 2%;
+    justify-content: space-between;
+    transition-duration: 0.2s;
+  }
+  #grph_frm:hover {
+    background:rgba(255, 255, 255, 0.2);
   }
 
   #tme_frm {
     font-size: 150%;
     line-height: 130%;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2% 2% 2% 2%;
+    justify-content: space-between;
+    transition-duration: 0.2s;
+  }
+  #tme_frm:hover {
+    background:rgba(255, 255, 255, 0.2);
   }
 
   #Comp-frms-str {
@@ -257,36 +332,57 @@
   }
 
   #shw_dta {
-    margin-top: 2%;
-    color: #cfebff;
-    font-size: 250%;
-    cursor: pointer;
-    transition-duration: 0.2s;
-    background-color: black;
-    padding: 1% 2%;
+    display: flex;
+    margin-top: 0.5em;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background:rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    font-size: 280%;
+    font-weight: bolder;
     border: none;
-    border-radius: 40px;
-    width: fit-content;
+    color: #cfebff;
+    transition-duration: 0.2s;
   }
 
   #shw_dta:hover {
-    box-shadow: 0 12px 16px 0 #cfebff48, 0 17px 50px 0 #cfebff48;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
+    background:rgba(255, 255, 255, 0.2);
   }
-
+  
   #shw_dta:active {
-    background-color: #001422;
-    box-shadow: 0 6px 10px 0 #cfebff48, 0 10px 40px 0 #cfebff48;
     transform: translateY(4px);
+    background:rgba(255, 255, 255, 0.23);
+    color: #cfebff;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.8);
   }
 
   #Shw-Data {
+    margin: auto;
     margin-top: 3%;
     display: none;
     color: #cfebff;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
+    width: 90%;
     font-family: "Fredoka";
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2% 2% 2% 2%;
+    justify-content: space-between;
+    transition-duration: 0.2s;
+  }
+  #Shw-Data:hover {
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
+    background:rgba(255, 255, 255, 0.2);
   }
 
   #results {
@@ -308,6 +404,13 @@
     text-align: center;
     font-family: "Fredoka";
     font-size: 300%;
+  }
+  #ppl-wtch {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
 
   #sugg {

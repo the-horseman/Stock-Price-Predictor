@@ -43,8 +43,25 @@ def BnkBaroda_data_add():
     if (findat1 != findat2):
         with open(path1, 'a', newline='') as f_object:
             f_object.write(",".join(list(map(str,findat2[0])))+"\n")
-
+        BnkBaroda_train()
     os.remove(path2)
+
+def BnkBaroda_train():
+    import joblib
+    import tensorflow as tf
+    from keras.preprocessing.sequence import TimeseriesGenerator
+    sc_path = os.path.dirname(os.path.realpath(__file__)) + "/BANKBARODA_scaler.pkl"
+    md_path = os.path.dirname(os.path.realpath(__file__)) + "/BANKBARODA_model.h5"
+    fil_path = os.path.dirname(os.path.realpath(__file__)) + "/BANKBARODA.NS.csv"
+    scaler = joblib.load(sc_path)
+    rnn = tf.keras.models.load_model(md_path)
+    df = pd.read_csv(fil_path, usecols=["Date", "Open", "Adj Close", "High", "Low"], index_col='Date',parse_dates=True)
+    df = df[-2::]
+    sc_t = scaler.transform(df)
+    gene = TimeseriesGenerator(sc_t, sc_t, 1, batch_size=1)
+    rnn.fit(gene, epochs=10)
+    rnn.save("BANKBARODA_model.h5")
+
 
 def broda_run():
     BnkOfBaroda_Data()

@@ -66,4 +66,4 @@ def AxisBnk_train():
 def axis_run():
     AxisBnk_Data()
     AxisBnk_data_add()
-axis_run()
+# axis_run()

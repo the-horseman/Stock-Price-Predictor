@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-from sklearn.preprocessing import scale
 import tensorflow as tf
 import pandas as pd
 import numpy as np

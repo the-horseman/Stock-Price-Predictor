@@ -3,3 +3,4 @@ flask
 pandas
 numpy
 tensorflow-cpu
+joblib

@@ -39,12 +39,29 @@ function reformat() {
 
 
     // Getting Predictions
+    let ext3 = { "sto": String(dat[0].value) };
+    fetch("/pred", {
+        method: "POST",
+        body: JSON.stringify(ext3)
+    }).then((result) => {
+        return result.json();
+    }).then((data) => {
+        let open = data["Open"];
+        let close = data["Close"];
+        let high = data["High"];
+        let low = data["Low"];
+
+        document.getElementById("op").innerText = "Open = " + String(open);
+        document.getElementById("cl").innerText = "Close = " + String(close);
+        document.getElementById("hi").innerText = "High = " + String(high);
+        document.getElementById("lo").innerText = "Low = " + String(low);
+    });
     // Got Predictions
 
 
     // Getting Graph data
     let arr = [[]];
-    ext2 = { "sto": String(dat[0].value), "gra": String(dat[1].value), "tme": String(dat[2].value) };
+    let ext2 = { "sto": String(dat[0].value), "gra": String(dat[1].value), "tme": String(dat[2].value) };
     fetch("/graph", {
         method: "POST",
         body: JSON.stringify(ext2)
@@ -60,7 +77,7 @@ function reformat() {
     function drawChart() {
         var data = google.visualization.arrayToDataTable(arr);
         var options = {
-            title: 'Stock Previous Data Graph',
+            title: String(dat[0].value).toUpperCase() + " Previous Data Graph",
             // curveType: 'function',
             pointSize: dat[2].value == "792" ? 1 : 4,
             legend: { position: 'bottom' },

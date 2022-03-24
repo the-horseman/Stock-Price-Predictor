@@ -59,8 +59,8 @@ def BnkBaroda_train():
     df = df[-2::]
     sc_t = scaler.transform(df)
     gene = TimeseriesGenerator(sc_t, sc_t, 1, batch_size=1)
-    rnn.fit(gene, epochs=10)
-    rnn.save("BANKBARODA_model.h5")
+    rnn.fit(gene, epochs=2)
+    rnn.save(md_path)
 
 
 def broda_run():

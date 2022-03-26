@@ -28,11 +28,11 @@ function reformat() {
         document.getElementById("sugst4").innerText = ex[3][0];
         document.getElementById("sugst5").innerText = ex[4][0];
 
-        document.getElementById("sugst_dat1").innerText = "Return = " + String(ex[0][1]) + "%";
-        document.getElementById("sugst_dat2").innerText = "Return = " + String(ex[1][1]) + "%";
-        document.getElementById("sugst_dat3").innerText = "Return = " + String(ex[2][1]) + "%";
-        document.getElementById("sugst_dat4").innerText = "Return = " + String(ex[3][1]) + "%";
-        document.getElementById("sugst_dat5").innerText = "Return = " + String(ex[4][1]) + "%";
+        document.getElementById("sugst_dat1").innerText = "Score = " + String(ex[0][1]) + "%";
+        document.getElementById("sugst_dat2").innerText = "Score = " + String(ex[1][1]) + "%";
+        document.getElementById("sugst_dat3").innerText = "Score = " + String(ex[2][1]) + "%";
+        document.getElementById("sugst_dat4").innerText = "Score = " + String(ex[3][1]) + "%";
+        document.getElementById("sugst_dat5").innerText = "Score = " + String(ex[4][1]) + "%";
 
     });
     // People Also Watch finished

@@ -66,4 +66,4 @@ def Wpro_train():
 def wpro_run():
     Wipro_data()
     Wpro_data_add()
-wpro_run()
+# wpro_run()
